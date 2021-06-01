@@ -69,6 +69,4 @@ logging:
     max-history: 100
   level:
     root: info
-    org.hibernate.type: trace
-    org.springframework.cloud: debug
     anticorona: debug
