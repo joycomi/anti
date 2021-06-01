@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: injection
-          image: skccteam3/injection:latest
+          image: skccteam3.azurecr.io/injection:latest
           ports:
             - containerPort: 8080
           readinessProbe:
