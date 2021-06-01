@@ -8,14 +8,10 @@ import org.springframework.cloud.stream.annotation.StreamListener;
 import org.springframework.messaging.handler.annotation.Payload;
 import org.springframework.stereotype.Service;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 @Service
 public class PolicyHandler{
     @Autowired VaccineRepository vaccineRepository;
-
-    private Logger logger = LoggerFactory.getLogger(this.getClass());
 
     @StreamListener(KafkaProcessor.INPUT)
     public void wheneverBookingCancelled_ModifyStock(@Payload BookingCancelled bookingCancelled){
@@ -46,11 +42,6 @@ public class PolicyHandler{
 
     @StreamListener(KafkaProcessor.INPUT)
     public void whatever(@Payload String eventString){
-        logger.trace("-----trace-----");
-        logger.debug("-----debug-----");
-        logger.info("-----info-----");
-        logger.warn("-----warn-----");
-        logger.error("-----error-----");
     }
 
 

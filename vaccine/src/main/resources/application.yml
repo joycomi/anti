@@ -64,14 +64,11 @@ spring:
           contentType: application/json
 logging:
   file:
-    path: /mnt/azure/vaccine-debug.log
+    path: /mnt/azure
     max-size: 100MB
     max-history: 100
   level:
-    root: TRACE
-    org.springframework.web: ERROR
-    com.howtodoinjava: DEBUG
-    org.hibernate: ERROR
-  pattern:
-    console: %d{yyyy-MM-dd HH:mm:ss} - %msg%n
-    file: %d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n
+    root: info
+    org.hibernate.type: trace
+    org.springframework.cloud: debug
+    anticorona: debug
