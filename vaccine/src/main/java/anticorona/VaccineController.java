@@ -8,8 +8,12 @@ import org.springframework.web.bind.annotation.RestController;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
  @RestController
  public class VaccineController {
+     private Logger logger = LoggerFactory.getLogger(this.getClass());
 
      @Autowired
      VaccineRepository vaccineRepository;
@@ -19,6 +23,12 @@ import javax.servlet.http.HttpServletResponse;
         produces = "application/json;charset=UTF-8")
     public boolean checkAndBookStock(HttpServletRequest request, HttpServletResponse response) {
         System.out.println("##### /vaccine/checkAndBookStock  called #####");
+
+        logger.trace("-----trace-----");
+        logger.debug("-----debug-----");
+        logger.info("-----info-----");
+        logger.warn("-----warn-----");
+        logger.error("-----error-----");
 
         boolean status = false;
 

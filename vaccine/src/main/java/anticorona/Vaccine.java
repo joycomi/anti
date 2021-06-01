@@ -5,9 +5,6 @@ import org.springframework.beans.BeanUtils;
 import java.util.List;
 import java.util.Date;
 
-// import org.slf4j.Logger;
-// import org.slf4j.LoggerFactory;
-
 @Entity
 @Table(name="Vaccine")
 public class Vaccine {
@@ -18,8 +15,6 @@ public class Vaccine {
     private String vcName;
     private Long stock;
     private Long bookQty;
-
-    // private Logger logger = LoggerFactory.getLogger(this.getClass());
 
     @Transient
     private Long previousStock;
@@ -32,11 +27,6 @@ public class Vaccine {
         previousStock = stock;
         previousBookQty = bookQty;
 
-        // logger.trace("-----trace-----");
-        // logger.debug("-----debug-----");
-        // logger.info("-----info-----");
-        // logger.warn("-----warn-----");
-        // logger.error("-----error-----");
     }
 
     @PostPersist

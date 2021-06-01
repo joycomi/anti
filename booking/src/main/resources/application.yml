@@ -37,6 +37,10 @@ logging:
     org.springframework.cloud: debug
 server:
   port: 8082
+
+api:
+  vaccine:
+    url: http://localhost:8081
 ---
 
 spring:
@@ -62,3 +66,6 @@ spring:
         event-out:
           destination: anticorona
           contentType: application/json
+api:
+  vaccine:
+    url: http://vaccine:8080

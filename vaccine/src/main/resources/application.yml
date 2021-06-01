@@ -62,11 +62,3 @@ spring:
         event-out:
           destination: anticorona
           contentType: application/json
-logging:
-  file:
-    path: /mnt/azure
-    max-size: 100MB
-    max-history: 100
-  level:
-    root: info
-    anticorona: debug
